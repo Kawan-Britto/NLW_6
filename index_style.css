@@ -18,6 +18,7 @@ body {
   color: var(--text-color);
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 img {
   width: 100%;
@@ -33,6 +34,9 @@ ul {
   width: 100%;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+}
+.section {
+  padding: 5rem 0
 }
 h1,
 .title {
@@ -138,9 +142,12 @@ nav.show .menu {
   display: grid;
   place-content: center;
 }
+
+
 nav.show ul.grid {
   gap: 4rem;
 }
+
 .toggle {
   color: var(--base-color);
   font-size: 1.5rem;
@@ -211,4 +218,207 @@ nav.show .icon-close {
 .divider-1 {
   height: 1px;
   background: linear-gradient(270deg, hsla(var(--hue), 36%, 57%, 1) 0%, hsla(var(--hue), 65%, 88%, 0.34) 100%);
+}
+
+
+
+#about .container{
+  margin: 0;
+}
+
+#about .image_about {
+  position: relative;
+}
+#about .image_about::before {
+   content: '';
+   height: 100%;
+   width: 100%;
+   background: var(--base-color-second);
+   position: absolute;
+   top: -10.20%;
+   right: 24.84%;
+   z-index: 0;
+}
+#about .image_about img{
+  position: relative;
+}
+#about .image_about::before, 
+#about .image_about img {
+  border-radius: 0.25rem;
+}
+
+#about .text_about {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+#about .text_paragrafy_about {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.625rem;
+
+}
+#about .text_paragrafy_about p {
+  line-height: 1.625rem;
+}
+
+
+.divider-2 {
+  height: 1px;
+  background: linear-gradient(270deg, hsla(var(--hue), 65%, 88%, 0.34), hsla(var(--hue), 36%, 57%, 1))100%;
+}
+
+
+
+#services .services_header{
+  margin-right: 1.5rem
+}
+#services .services_header h2 {
+  font: 700 30px 'Poppins', sans-serif;
+  color: var(--title-color);
+}
+#services .services_header p {
+  line-height: 1.625rem;
+  color: var(--title-color);
+}
+#services .services_header p strong {
+  color: var(--base-color);
+}
+
+#services .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3.625rem 2rem;
+  margin-right: 1.5rem;
+}
+#services .cards .card {
+  box-shadow: 0px 0px 6px black;
+  border-bottom: var(--base-color) 4px solid;
+  border-radius: 0.25rem 0.25rem 0 0;
+
+  text-align: center;
+
+}
+#services .cards .card h3 {
+  color: var(--title-color);
+  margin-bottom: 0.75rem;
+}
+#services .cards .card p {
+  margin-bottom: 3.375rem;
+}
+#services .cards .icon-woman-hair,
+#services .cards .icon-cosmetic,
+#services .cards .icon-trim{
+  color: var(--base-color-alt);
+  font-size: 5rem;
+
+  display: block;
+  margin-top: 3.625rem;
+  margin-bottom: 1.5rem;
+}
+
+
+.divider-3 {
+  height: 1px;
+  background: linear-gradient(270deg, hsla(var(--hue), 36%, 57%, 1) 0%, hsla(var(--hue), 65%, 88%, 0.34) 100%);
+  box-shadow: 2px 2px 3px 2px #00000040;
+  ;
+}
+
+
+#tertimonials .tertimonials_header {
+  margin-right: 8rem;
+  color: var(--title-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+#tertimonials .comments {
+  display: flex;
+  margin-right: 3rem;
+  box-shadow: 0px 0px 12px var(--title-color);
+  border-radius: 0.3rem;
+}
+#tertimonials .comments .comment {
+  padding: 2rem;
+
+}
+#tertimonials .comments .comment p {
+  line-height: 1.625rem;
+  color: var(--title-color);
+}
+#tertimonials .comments .comment p span {
+  font-weight: 400;
+  font-size: 3rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: var(--base-color);
+}
+#tertimonials .comments .profile {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+#tertimonials .comments .profile img {
+  height: 2rem;
+  width: 2rem;
+}
+#tertimonials .comments .profile .profile_name {
+  color: var(--text-color);
+}
+
+
+#contact .contact_header h2{
+  font-size: 1.875rem;
+  color: var(--title-color);
+  font-weight: 700;
+}
+#contact .contact_header p {
+  line-height: 1.625rem;
+}
+#contact a {
+  width: 14.75rem;
+  height: 3.5rem;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 4rem;
+}
+#contact a i {
+  font-size: 1.5rem;
+}
+#contact .other_contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#contact .other_contact .contact_grid {
+  display: inline-flex;
+  gap: 0.75rem;
+}
+#contact .other_contact .contact_grid div {
+  color: var(--base-color-alt);
+  font-size: 1.5rem;
+}
+
+
+footer {
+  background-color: var(--base-color);
+  padding: 4rem 0;
+  color: var(--text-color-light);
+}
+footer .logo span {
+  color: var(--text-color-light);
+}
+footer .copyright {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+footer .social_media {
+  font-size: 1.5rem;
+  display: inline-flex;
+  gap: 2rem
 }
